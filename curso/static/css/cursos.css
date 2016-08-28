@@ -1,0 +1,18 @@
+.corpo{
+  background-image: url("http://www.publicdomainpictures.net/pictures/170000/velka/grunge-background-1463561107zwy.jpg");
+  color: green;
+}
+.tabela{
+  background-color: yellow;
+  border: 3px solid black;
+  width: 100%;
+  border-collapse: collapse;
+}
+th{
+  width: 30px;
+  border: 3px solid black;
+}
+td{
+  border: 3px solid black;
+  height: auto;
+}

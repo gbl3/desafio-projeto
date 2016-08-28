@@ -1,0 +1,50 @@
+{% load static %}
+<html>
+<head>
+		<title>Cursos </title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/cursos.css' %}">
+</head>
+
+<body class ="corpo">
+	<table class ="tabela">
+		<thead>
+				<th style="text-align:center">
+					Categoria
+				</th>
+				<th style="text-align:center">
+					 Curso
+				</th>
+				<th style="text-align:center">
+					 Situação
+				</th>
+		</thead>
+		<tbody>
+				<tr>
+						<td style="text-align:center">
+							{% for curso in cursos %}
+									{{ curso.category }} </br>
+								{% endfor %}
+						</td>
+						<td style="text-align:center">
+							{% for curso in cursos %}
+										<a>{{ curso }}</a></br>
+							{% endfor %}
+						</td>
+						<td style="text-align:center">
+							{% for curso in cursos %}
+									{% if curso.is_approved %}
+ 											Aprovado </br>
+									{% else %}
+											Reprovado </br>
+									{% endif %}
+							{% endfor %}
+						</td>
+				</tr>
+
+	</tbody>
+	</table>
+
+</body>
+</html>
