@@ -20,6 +20,7 @@ class Category(models.Model):
 
 class Course(models.Model):
     name = models.CharField('Name', max_length = 30)
+    slug = models.SlugField('Slug', max_length = 40,unique = True)
     is_approved = models.BooleanField('Is Approved',default = False)
     category = models.ForeignKey('Category')
     date_start = models.DateField('Date', blank = True)

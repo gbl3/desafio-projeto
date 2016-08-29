@@ -8,8 +8,8 @@ def cursos(request):
     context['cursos'] = cursos
 
     return render(request, "curso/cursos.html",context)
-def details(request,pk):
-    curso = get_object_or_404(Course, pk = pk)
+def details(request,slug):
+    curso = get_object_or_404(Course, slug = slug)
     context = {
         'curso': curso
     }

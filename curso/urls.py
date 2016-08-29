@@ -18,7 +18,8 @@ from . import views
 
 urlpatterns = [
     url(r'^cursos/$',views.cursos, name = 'cursos'),
-    url(r'^cursos/(?P<pk>\d+)/$',views.details, name = "curso_detalhado")
+    url(r'^cursos/(?P<slug>[\w_-]+)/$',views.details, name = "curso_detalhado"),
+    #url(r'^cursos/(?P<pk>\d+)/$',views.details, name = "curso_detalhado")
 
 
 ]

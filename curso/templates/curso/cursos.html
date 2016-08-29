@@ -29,7 +29,7 @@
 						</td>
 						<td style="text-align:center">
 							{% for curso in cursos %}
-										<a>{{ curso }}</a></br>
+										<a href="{% url 'cursos:curso_detalhado' curso.slug %}">{{ curso }}</a></br>
 							{% endfor %}
 						</td>
 						<td style="text-align:center">
